@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="/html-css-projects/forms/form-1/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>Personal Details</h2>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input
+                type="text"
+                name="user-name"
+                id="username"
+                placeholder="John Doe"
+                required
+              />
+            </li>
+            <li>
+              <label for="usermail">Your email address</label>
+              <input
+                type="email"
+                name="user-mail"
+                id="usermail"
+                placeholder="johndoe@email.com"
+                required
+              />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input
+                type="password"
+                name="user-password"
+                id="userpassword"
+                required
+                minlength="7"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input
+                type="number"
+                step="1"
+                name="user-age"
+                id="userage"
+                required
+                min="18"
+                max="100"
+              />
+            </li>
+            <li>
+              <label for="birthdate">Your Date of Birth</label>
+              <input
+                type="date"
+                id="birthdate"
+                name="birthday"
+                required
+                min="1950-01-01"
+                max="2003-12-31"
+              />
+            </li>
+            <li>
+              <label for="profession">Your Profession</label>
+              <select id="profession" name="your-profession">
+                <option>Engineer</option>
+                <option>Doctor</option>
+                <option>Public Administration</option>
+                <option>Research Scientist</option>
+                <option>Government Employee</option>
+                <option>Businessman</option>
+                <option>Student</option>
+                <option>Others</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="usermessage">Your message</label>
+          <textarea
+            name="user-message"
+            id="usermessage"
+            cols="50"
+            rows="5"
+          ></textarea>
+        </section>
+
+        <section>
+          <h2>Verify your account</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text-message"
+                value="text-message"
+                required
+              />
+              <label for="verify-text-message">Via test message (SMS)</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+                required
+              />
+              <label for="verify-phone">Via phone call</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Via an email</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we contact you?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="contact-phone"
+                name="contact"
+                value="phone"
+              />
+              <label for="contact-phone">Contact me via phone</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                id="contact-email"
+                name="contact"
+                value="email"
+              />
+              <label for="contact-email">Contact me via email</label>
+            </li>
+          </ul>
+        </section>
+
+        <hr />
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms" name="terms" required />
+            <label for="agree-terms"><strong> Agree to terms?</strong></label>
+          </div>
+        </section>
+
+        <section>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
